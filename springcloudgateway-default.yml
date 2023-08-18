@@ -3,10 +3,12 @@ spring:
     gateway:
       routes:
         - id: msa-dev
-          uri: lb://MSA-DEV
+          #uri: lb://MSA-DEV
+          uri: http://192.168.1.201:31330
           predicates:
             - Path=/dev/**
         - id: msa-prod
-          uri: lb://MSA-PROD
+          #uri: lb://MSA-PROD
+          uri: http://192.168.1.201:31331
           predicates:
             - Path=/prod/**
