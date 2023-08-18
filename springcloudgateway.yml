@@ -1,0 +1,12 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: msa-dev
+          uri: lb://MSA-DEV
+          predicates:
+            - Path=/dev/**
+        - id: msa-prod
+          uri: lb://MSA-PROD
+          predicates:
+            - Path=/prod/**
