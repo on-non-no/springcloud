@@ -11,6 +11,6 @@ spring:
           predicates:
             - Path=/prod/**
         - id: msa-default
-          uri: lb://MSA-DEV
+          uri: lb://MSA-DEFAULT
           predicates:
             - Path=/default/**
